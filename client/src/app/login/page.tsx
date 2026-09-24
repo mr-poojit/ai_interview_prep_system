@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '../../lib/authContext';
 import { Sparkles, AlertCircle, ArrowRight, Loader2 } from 'lucide-react';
+import { BrandLogo } from '../../components/BrandLogo';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -35,9 +36,7 @@ export default function LoginPage() {
     <div className="flex-1 flex items-center justify-center px-4 py-8 sm:py-16">
       <div className="w-full max-w-md p-6 sm:p-8 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl">
         <div className="text-center mb-6 sm:mb-8">
-          <div className="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center mx-auto mb-3 shadow-inner">
-            <Sparkles className="w-6 h-6" />
-          </div>
+          <BrandLogo size="lg" className="mx-auto mb-3" />
           <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">Welcome Back</h1>
           <p className="text-xs sm:text-sm text-slate-400 mt-1">Sign in to access your interview preparation kits</p>
         </div>

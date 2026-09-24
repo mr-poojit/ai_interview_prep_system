@@ -1,80 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4338CA" />
-      <stop offset="45%" stop-color="#6366F1" />
-      <stop offset="80%" stop-color="#7C3AED" />
-      <stop offset="100%" stop-color="#9333EA" />
+    <linearGradient id="tutorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#7C3AED" />
     </linearGradient>
 
-    <!-- Glowing Accent Gradient -->
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8" />
-      <stop offset="50%" stop-color="#818CF8" />
-      <stop offset="100%" stop-color="#C084FC" />
-    </linearGradient>
-
-    <!-- Star Glow Gradient -->
-    <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="60%" stop-color="#E0E7FF" />
-      <stop offset="100%" stop-color="#A5B4FC" />
+    <!-- Top Highlight -->
+    <linearGradient id="rimShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05" />
     </linearGradient>
   </defs>
 
-  <!-- Background Squircle with subtle rim -->
-  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#bgGrad)" />
-  <rect x="24" y="24" width="464" height="464" rx="112" fill="none" stroke="rgba(255, 255, 255, 0.22)" stroke-width="6" />
+  <!-- Squircle Container -->
+  <rect x="4" y="4" width="92" height="92" rx="26" fill="url(#tutorGrad)" />
+  <rect x="4" y="4" width="92" height="92" rx="26" stroke="url(#rimShine)" stroke-width="1.5" />
 
-  <!-- Background Ambient Glow Circle -->
-  <circle cx="256" cy="240" r="140" fill="url(#accentGrad)" opacity="0.3" />
-
-  <!-- Interview Dossier / Shield / Kit Silhouette -->
-  <g transform="translate(0, 10)">
+  <!-- Tutor Graduation Cap (Mortarboard & Tassel) -->
+  <g>
+    <!-- Cap Diamond (Mortarboard top) -->
     <path
-      d="M168 152 C168 136, 180 124, 196 124 L316 124 C332 124, 344 136, 344 152 L344 290 C344 340, 256 392, 256 392 C256 392, 168 340, 168 290 Z"
-      fill="rgba(15, 23, 42, 0.45)"
-      stroke="url(#accentGrad)"
-      stroke-width="12"
-      stroke-linejoin="round"
+      d="M50 24 L84 39.5 L50 55 L16 39.5 Z"
+      fill="#FFFFFF"
     />
 
+    <!-- Cap Under-Shadow for 3D depth -->
     <path
-      d="M192 144 H320"
-      stroke="rgba(255, 255, 255, 0.4)"
-      stroke-width="8"
-      stroke-linecap="round"
+      d="M50 55 L84 39.5 L84 43 L50 58.5 L16 43 L16 39.5 Z"
+      fill="#C7D2FE"
+      opacity="0.6"
     />
 
-    <!-- Main AI Star Emblem -->
+    <!-- Skullcap Base (Headband) -->
     <path
-      d="M256 160 Q256 226, 322 226 Q256 226, 256 292 Q256 226, 190 226 Q256 226, 256 160 Z"
-      fill="url(#starGrad)"
-    />
-
-    <!-- Small Accent Sparkle (Top Right) -->
-    <path
-      d="M352 148 Q352 172, 376 172 Q352 172, 352 196 Q352 172, 328 172 Q352 172, 352 148 Z"
+      d="M30 47 V58 C30 67, 50 74, 70 58 V47 C64 53, 56 56, 50 56 C44 56, 36 53, 30 47 Z"
       fill="#F8FAFC"
-      opacity="0.9"
     />
 
-    <!-- Small Accent Sparkle (Bottom Left) -->
-    <path
-      d="M160 300 Q160 316, 176 316 Q160 316, 160 332 Q160 316, 144 316 Q160 316, 160 300 Z"
-      fill="#38BDF8"
-      opacity="0.85"
-    />
+    <!-- Center Button -->
+    <ellipse cx="50" cy="39.5" rx="3.5" ry="2" fill="#818CF8" />
 
-    <!-- Verified Check Accent (Bottom Center) -->
-    <circle cx="256" cy="336" r="28" fill="#10B981" />
+    <!-- Tassel Ribbon & Ring -->
     <path
-      d="M244 336 L253 345 L268 327"
-      stroke="#FFFFFF"
-      stroke-width="6"
+      d="M50 39.5 C68 40, 84 44, 84 48 V65"
+      stroke="#38BDF8"
+      stroke-width="3"
       stroke-linecap="round"
-      stroke-linejoin="round"
+    />
+
+    <!-- Tassel Brush / Fringe -->
+    <path
+      d="M81 65 H87 L88 75 C88 76, 80 76, 80 75 Z"
+      fill="#38BDF8"
     />
   </g>
 </svg>

@@ -17,6 +17,7 @@ import {
   LayoutDashboard,
   Layers,
 } from 'lucide-react';
+import { BrandLogo } from './BrandLogo';
 
 export const Navbar: React.FC = () => {
   const pathname = usePathname();
@@ -62,9 +63,7 @@ export const Navbar: React.FC = () => {
           className="flex items-center space-x-2.5 sm:space-x-3 group min-w-0"
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform shrink-0">
-            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-          </div>
+          <BrandLogo size="md" className="group-hover:scale-105 transition-transform" />
           <div className="flex items-center">
             <span className="font-extrabold text-base sm:text-lg tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
               PrepKit AI
