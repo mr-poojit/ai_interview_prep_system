@@ -14,12 +14,12 @@ export interface CrawlResult {
   error?: string;
 }
 
-const USER_AGENT = 'AIInterviewPrepKit/1.0 (+https://github.com/trao-candidate/interview-prep)';
+const USER_AGENT = 'PrepKitAI/1.0 (+https://github.com/prepkit-ai/interview-prep)';
 
 /**
  * Validates external URLs.
  * In production, blocks private & loopback IP addresses (SSRF mitigation).
- * In development / test / evaluate, permits local hosts as required by Section 9.
+ * In development / test / evaluate, permits local hosts for mock evaluation servers.
  */
 export function isSafeUrl(rawUrl: string): boolean {
   try {
