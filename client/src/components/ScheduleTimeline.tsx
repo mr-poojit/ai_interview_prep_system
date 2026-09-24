@@ -18,20 +18,20 @@ export const ScheduleTimeline: React.FC<ScheduleTimelineProps> = ({
   const getQuestionById = (id: string) => questions.find((q) => q.id === id);
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+    <div className="space-y-5 sm:space-y-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-3 sm:pb-4 border-b border-slate-800">
         <div>
-          <h2 className="text-xl font-bold text-white flex items-center space-x-2">
+          <h2 className="text-lg sm:text-xl font-bold text-white flex items-center space-x-2">
             <Calendar className="w-5 h-5 text-indigo-400" />
             <span>Preparation Schedule ({schedule.days_available} Days)</span>
           </h2>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-400 mt-1 leading-relaxed">
             Arithmetic allocation prioritizing complex system design and must-have requirements earlier in your timeline.
           </p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
         {schedule.days.map((day) => {
           const dayQuestions = day.question_ids
             .map(getQuestionById)
@@ -40,7 +40,7 @@ export const ScheduleTimeline: React.FC<ScheduleTimelineProps> = ({
           return (
             <div
               key={day.day}
-              className="flex flex-col justify-between p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all shadow-md"
+              className="flex flex-col justify-between p-4 sm:p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all shadow-md"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">

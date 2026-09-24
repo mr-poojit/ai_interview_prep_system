@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { AuthProvider } from '../lib/authContext';
 import { Navbar } from '../components/Navbar';
@@ -7,6 +7,21 @@ export const metadata: Metadata = {
   title: 'PrepKit AI - Personalized Interview Preparation Kits',
   description:
     'Turn any job description and company URL into a comprehensive, verified, editable interview prep kit with flashcards, mock interviews, and day-by-day schedules.',
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-icon.svg',
+    shortcut: '/icon.svg',
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#020617',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({

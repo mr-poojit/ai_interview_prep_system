@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { api } from '../../../lib/api';
 import { useAuth } from '../../../lib/authContext';
-import { KitRecord, KitStructure } from '../../../lib/types';
+import { KitRecord } from '../../../lib/types';
 import { KitBuilder } from '../../../components/KitBuilder';
 import { ScheduleTimeline } from '../../../components/ScheduleTimeline';
 import { FlashcardDeck } from '../../../components/FlashcardDeck';
@@ -84,7 +84,7 @@ export default function KitDetailPage() {
         <p className="text-xs text-slate-400 mt-1">{error || 'This kit does not exist or access was denied.'}</p>
         <Link
           href="/dashboard"
-          className="inline-flex items-center space-x-2 mt-6 px-4 py-2 rounded-xl bg-slate-800 text-white text-xs font-semibold"
+          className="inline-flex items-center space-x-2 mt-6 px-4 py-2.5 rounded-xl bg-slate-800 text-white text-xs font-semibold"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Return to Dashboard</span>
@@ -97,9 +97,9 @@ export default function KitDetailPage() {
   const uncoveredCount = kit.coverage.uncovered_requirement_ids.length;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1 flex flex-col space-y-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 w-full flex-1 flex flex-col space-y-5 sm:space-y-6">
       {/* Top Breadcrumb & Metadata Header */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-slate-800">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-5 sm:pb-6 border-b border-slate-800">
         <div>
           <Link
             href="/dashboard"
@@ -109,8 +109,8 @@ export default function KitDetailPage() {
             <span>Back to Kits Dashboard</span>
           </Link>
 
-          <div className="flex items-center space-x-3">
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            <h1 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
               {kit.role.title}
             </h1>
             <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
@@ -118,13 +118,13 @@ export default function KitDetailPage() {
             </span>
           </div>
 
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-400 mt-1 leading-relaxed">
             Seniority: {kit.role.seniority} • {kit.source.location} • Researched {new Date(kit.source.researched_at).toLocaleDateString()}
           </p>
         </div>
 
         {/* Coverage & Timeline Pills */}
-        <div className="flex items-center space-x-3 text-xs">
+        <div className="flex flex-wrap items-center gap-2 text-xs">
           <div className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300">
             <Calendar className="w-3.5 h-3.5 text-indigo-400" />
             <span>{kit.schedule.days_available} Days</span>
@@ -133,60 +133,60 @@ export default function KitDetailPage() {
           <div className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300">
             <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
             <span>
-              {uncoveredCount === 0 ? 'Must-haves: 100% Covered' : `${uncoveredCount} Gaps`} (Passes: {kit.coverage.passes})
+              {uncoveredCount === 0 ? '100% Must Covered' : `${uncoveredCount} Gaps`} (Passes: {kit.coverage.passes})
             </span>
           </div>
         </div>
       </div>
 
-      {/* Navigation Tabs */}
-      <div className="flex items-center space-x-2 border-b border-slate-800 overflow-x-auto pb-1">
+      {/* Navigation Tabs - with horizontal scroll on mobile */}
+      <div className="flex items-center space-x-1.5 sm:space-x-2 border-b border-slate-800 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
         <button
           onClick={() => setActiveTab('builder')}
-          className={`flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all whitespace-nowrap ${
+          className={`flex items-center space-x-1.5 sm:space-x-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-semibold transition-all whitespace-nowrap shrink-0 cursor-pointer ${
             activeTab === 'builder'
-              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/25'
               : 'text-slate-400 hover:text-white hover:bg-slate-900'
           }`}
         >
-          <Sparkles className="w-4 h-4" />
-          <span>The Builder (Questions & Brief)</span>
+          <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+          <span>The Builder</span>
         </button>
 
         <button
           onClick={() => setActiveTab('schedule')}
-          className={`flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all whitespace-nowrap ${
+          className={`flex items-center space-x-1.5 sm:space-x-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-semibold transition-all whitespace-nowrap shrink-0 cursor-pointer ${
             activeTab === 'schedule'
-              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/25'
               : 'text-slate-400 hover:text-white hover:bg-slate-900'
           }`}
         >
-          <Calendar className="w-4 h-4" />
+          <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           <span>Daily Schedule ({kit.schedule.days_available}d)</span>
         </button>
 
         <button
           onClick={() => setActiveTab('flashcards')}
-          className={`flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all whitespace-nowrap ${
+          className={`flex items-center space-x-1.5 sm:space-x-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-semibold transition-all whitespace-nowrap shrink-0 cursor-pointer ${
             activeTab === 'flashcards'
-              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/25'
               : 'text-slate-400 hover:text-white hover:bg-slate-900'
           }`}
         >
-          <BookOpen className="w-4 h-4" />
-          <span>Flashcard Practice ({kit.flashcards.length})</span>
+          <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+          <span>Flashcards ({kit.flashcards.length})</span>
         </button>
 
         <button
           onClick={() => setActiveTab('mock')}
-          className={`flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all whitespace-nowrap ${
+          className={`flex items-center space-x-1.5 sm:space-x-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-semibold transition-all whitespace-nowrap shrink-0 cursor-pointer ${
             activeTab === 'mock'
-              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/25'
               : 'text-slate-400 hover:text-white hover:bg-slate-900'
           }`}
         >
-          <Mic className="w-4 h-4" />
-          <span>AI Mock Interview Simulator</span>
+          <Mic className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+          <span>Mock Interview</span>
         </button>
       </div>
 
