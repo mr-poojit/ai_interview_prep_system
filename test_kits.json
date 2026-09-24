@@ -1,0 +1,381 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-09-23T16:05:13.604Z",
+  "kits": [
+    {
+      "id": "case-01",
+      "status": "ok",
+      "kit": {
+        "source": {
+          "company": "Example",
+          "company_url": "https://example.com",
+          "role": "Senior Backend Engineer",
+          "location": "Remote / Unspecified",
+          "jd_chars": 376,
+          "researched_at": "2026-09-23T16:05:12.793Z",
+          "pages_used": [
+            "https://example.com/"
+          ]
+        },
+        "company_brief": {
+          "summary": "Operating under \"Example Domain\". Explores technology solutions as presented on their web presence.",
+          "what_they_do": "This domain is for use in documentation examples without needing permission. Avoid use in operations.",
+          "sources": [
+            "https://example.com/"
+          ]
+        },
+        "role": {
+          "title": "Senior Backend Engineer",
+          "seniority": "Senior",
+          "responsibilities": [
+            "Design, build, and maintain efficient, reusable, and reliable code.",
+            "Collaborate with cross-functional teams to define and ship features."
+          ],
+          "requirements": [
+            {
+              "id": "r1",
+              "text": "Senior Backend Engineer",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r2",
+              "text": "We are looking for a Senior Backend Engineer to build scalable microservices in Go. Requirements:",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r3",
+              "text": "5+ years experience building Go microservices (required)",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r4",
+              "text": "Deep knowledge of PostgreSQL, Redis, and distributed systems (required)",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r5",
+              "text": "Experience mentoring junior and mid-level engineers (required)",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r6",
+              "text": "Bonus points for Kubernetes and Terraform experience.",
+              "kind": "technical",
+              "priority": "nice"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "technical",
+            "prompt": "How have you applied Senior Backend Engineer in a production environment, and what architectural trade-offs did you make?",
+            "answer_outline": "- Specific architectural context and constraints\n- Core implementation mechanics and libraries\n- Performance, scalability, and error-handling considerations",
+            "difficulty": 3
+          },
+          {
+            "id": "q2",
+            "requirement_ids": [
+              "r2"
+            ],
+            "category": "technical",
+            "prompt": "How have you applied We are looking for a Senior Backend Engineer to build scalable microservices in Go. Requirements: in a production environment, and what architectural trade-offs did you make?",
+            "answer_outline": "- Specific architectural context and constraints\n- Core implementation mechanics and libraries\n- Performance, scalability, and error-handling considerations",
+            "difficulty": 3
+          },
+          {
+            "id": "q3",
+            "requirement_ids": [
+              "r3"
+            ],
+            "category": "technical",
+            "prompt": "How have you applied 5+ years experience building Go microservices (required) in a production environment, and what architectural trade-offs did you make?",
+            "answer_outline": "- Specific architectural context and constraints\n- Core implementation mechanics and libraries\n- Performance, scalability, and error-handling considerations",
+            "difficulty": 3
+          },
+          {
+            "id": "q4",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "behavioural",
+            "prompt": "Tell me about a time when you had to manage conflicting technical priorities or handle a production setback related to Senior Backend Engineer.",
+            "answer_outline": "- Situation & Task: Clear project context and conflicting stakeholder or team priorities\n- Action taken: Personal ownership, constructive communication, and compromise\n- Result: Measured outcome and post-incident takeaways",
+            "difficulty": 2
+          },
+          {
+            "id": "q5",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "system-design",
+            "prompt": "Design a high-throughput, fault-tolerant service supporting the core workflows required for a Senior Backend Engineer. How do you partition data and handle failover?",
+            "answer_outline": "- High-level architecture: API gateway, microservices, asynchronous queues\n- Storage & Partitioning: Read/write patterns, replication, sharding\n- Resilience: Circuit breakers, rate limiters, monitoring and telemetry",
+            "difficulty": 3
+          },
+          {
+            "id": "q6",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "company-fit",
+            "prompt": "What excites you about our engineering problems, and how does your background in Senior Backend Engineer prepare you to contribute from day one?",
+            "answer_outline": "- Articulation of company product and value proposition\n- Concrete examples aligning past experience with company needs\n- Genuine intellectual curiosity and cultural alignment",
+            "difficulty": 1
+          },
+          {
+            "id": "q7",
+            "requirement_ids": [
+              "r4"
+            ],
+            "category": "technical",
+            "prompt": "How have you applied Deep knowledge of PostgreSQL, Redis, and distributed systems (required) in a production environment, and what architectural trade-offs did you make?",
+            "answer_outline": "- Specific architectural context and constraints\n- Core implementation mechanics and libraries\n- Performance, scalability, and error-handling considerations",
+            "difficulty": 3
+          },
+          {
+            "id": "q8",
+            "requirement_ids": [
+              "r5"
+            ],
+            "category": "technical",
+            "prompt": "How have you applied Experience mentoring junior and mid-level engineers (required) in a production environment, and what architectural trade-offs did you make?",
+            "answer_outline": "- Specific architectural context and constraints\n- Core implementation mechanics and libraries\n- Performance, scalability, and error-handling considerations",
+            "difficulty": 3
+          },
+          {
+            "id": "q9",
+            "requirement_ids": [
+              "r6"
+            ],
+            "category": "technical",
+            "prompt": "How have you applied Bonus points for Kubernetes and Terraform experience. in a production environment, and what architectural trade-offs did you make?",
+            "answer_outline": "- Specific architectural context and constraints\n- Core implementation mechanics and libraries\n- Performance, scalability, and error-handling considerations",
+            "difficulty": 2
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "f1",
+            "front": "Core mechanics & key gotchas of: Senior Backend Engineer",
+            "back": "Understand internal lifecycle, state management or scaling bottlenecks, and failure modes when utilizing Senior Backend Engineer in production.",
+            "requirement_ids": [
+              "r1"
+            ]
+          },
+          {
+            "id": "f2",
+            "front": "Core mechanics & key gotchas of: We are looking for a Senior Backend Engineer to build scalable microservices in Go. Requirements:",
+            "back": "Understand internal lifecycle, state management or scaling bottlenecks, and failure modes when utilizing We are looking for a Senior Backend Engineer to build scalable microservices in Go. Requirements: in production.",
+            "requirement_ids": [
+              "r2"
+            ]
+          },
+          {
+            "id": "f3",
+            "front": "Core mechanics & key gotchas of: 5+ years experience building Go microservices (required)",
+            "back": "Understand internal lifecycle, state management or scaling bottlenecks, and failure modes when utilizing 5+ years experience building Go microservices (required) in production.",
+            "requirement_ids": [
+              "r3"
+            ]
+          },
+          {
+            "id": "f4",
+            "front": "Core mechanics & key gotchas of: Deep knowledge of PostgreSQL, Redis, and distributed systems (required)",
+            "back": "Understand internal lifecycle, state management or scaling bottlenecks, and failure modes when utilizing Deep knowledge of PostgreSQL, Redis, and distributed systems (required) in production.",
+            "requirement_ids": [
+              "r4"
+            ]
+          },
+          {
+            "id": "f5",
+            "front": "Core mechanics & key gotchas of: Experience mentoring junior and mid-level engineers (required)",
+            "back": "Understand internal lifecycle, state management or scaling bottlenecks, and failure modes when utilizing Experience mentoring junior and mid-level engineers (required) in production.",
+            "requirement_ids": [
+              "r5"
+            ]
+          },
+          {
+            "id": "f6",
+            "front": "Core mechanics & key gotchas of: Bonus points for Kubernetes and Terraform experience.",
+            "back": "Understand internal lifecycle, state management or scaling bottlenecks, and failure modes when utilizing Bonus points for Kubernetes and Terraform experience. in production.",
+            "requirement_ids": [
+              "r6"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 5,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Core Technical Deep Dive & Critical Requirements",
+              "question_ids": [
+                "q5",
+                "q1"
+              ],
+              "minutes": 75
+            },
+            {
+              "day": 2,
+              "focus": "Behavioral Scenarios, Leadership & Conflict Resolution",
+              "question_ids": [
+                "q2",
+                "q4"
+              ],
+              "minutes": 60
+            },
+            {
+              "day": 3,
+              "focus": "Company Mission, Domain Acumen & Cultural Synergy",
+              "question_ids": [
+                "q3",
+                "q6"
+              ],
+              "minutes": 60
+            },
+            {
+              "day": 4,
+              "focus": "Applied Technical Problem Solving & Trade-offs",
+              "question_ids": [
+                "q7",
+                "q9"
+              ],
+              "minutes": 60
+            },
+            {
+              "day": 5,
+              "focus": "Final Rehearsal: High-Yield Summary & Behavioral Pitch",
+              "question_ids": [
+                "q8"
+              ],
+              "minutes": 45
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 2
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "case-02",
+      "status": "ok",
+      "kit": {
+        "source": {
+          "company": "Invalid-non-existent-domain-404-test",
+          "company_url": "https://invalid-non-existent-domain-404-test.xyz",
+          "role": "Backend developer needed for payment API integration.",
+          "location": "Remote / Unspecified",
+          "jd_chars": 53,
+          "researched_at": "2026-09-23T16:05:13.604Z",
+          "pages_used": []
+        },
+        "company_brief": {
+          "summary": "Research into https://invalid-non-existent-domain-404-test.xyz was constrained: Failed to connect to company homepage: fetch failed. Candidate should clarify company scale and focus during initial recruiter screen.",
+          "what_they_do": "Unable to verify core business operations from the provided URL (https://invalid-non-existent-domain-404-test.xyz).",
+          "sources": []
+        },
+        "role": {
+          "title": "Backend developer needed for payment API integration.",
+          "seniority": "Mid-Level",
+          "responsibilities": [
+            "Design, build, and maintain efficient, reusable, and reliable code.",
+            "Collaborate with cross-functional teams to define and ship features."
+          ],
+          "requirements": [
+            {
+              "id": "r1",
+              "text": "Backend developer needed for payment API integration.",
+              "kind": "technical",
+              "priority": "must"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "technical",
+            "prompt": "How have you applied Backend developer needed for payment API integration. in a production environment, and what architectural trade-offs did you make?",
+            "answer_outline": "- Specific architectural context and constraints\n- Core implementation mechanics and libraries\n- Performance, scalability, and error-handling considerations",
+            "difficulty": 3
+          },
+          {
+            "id": "q2",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "behavioural",
+            "prompt": "Tell me about a time when you had to manage conflicting technical priorities or handle a production setback related to Backend developer needed for payment API integration..",
+            "answer_outline": "- Situation & Task: Clear project context and conflicting stakeholder or team priorities\n- Action taken: Personal ownership, constructive communication, and compromise\n- Result: Measured outcome and post-incident takeaways",
+            "difficulty": 2
+          },
+          {
+            "id": "q3",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "system-design",
+            "prompt": "Design a high-throughput, fault-tolerant service supporting the core workflows required for a Backend developer needed for payment API integration.. How do you partition data and handle failover?",
+            "answer_outline": "- High-level architecture: API gateway, microservices, asynchronous queues\n- Storage & Partitioning: Read/write patterns, replication, sharding\n- Resilience: Circuit breakers, rate limiters, monitoring and telemetry",
+            "difficulty": 3
+          },
+          {
+            "id": "q4",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "company-fit",
+            "prompt": "What excites you about our engineering problems, and how does your background in Backend developer needed for payment API integration. prepare you to contribute from day one?",
+            "answer_outline": "- Articulation of company product and value proposition\n- Concrete examples aligning past experience with company needs\n- Genuine intellectual curiosity and cultural alignment",
+            "difficulty": 1
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "f1",
+            "front": "Core mechanics & key gotchas of: Backend developer needed for payment API integration.",
+            "back": "Understand internal lifecycle, state management or scaling bottlenecks, and failure modes when utilizing Backend developer needed for payment API integration. in production.",
+            "requirement_ids": [
+              "r1"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 1,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Intensive Review: Core Technical Mastery & System Design",
+              "question_ids": [
+                "q3",
+                "q1",
+                "q2",
+                "q4"
+              ],
+              "minutes": 60
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        }
+      },
+      "error": null
+    }
+  ]
+}

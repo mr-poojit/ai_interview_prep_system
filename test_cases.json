@@ -1,0 +1,14 @@
+[
+  {
+    "id": "case-01",
+    "jd": "Senior Backend Engineer\n\nWe are looking for a Senior Backend Engineer to build scalable microservices in Go. Requirements:\n- 5+ years experience building Go microservices (required)\n- Deep knowledge of PostgreSQL, Redis, and distributed systems (required)\n- Experience mentoring junior and mid-level engineers (required)\n- Bonus points for Kubernetes and Terraform experience.",
+    "company_url": "https://example.com",
+    "days": 5
+  },
+  {
+    "id": "case-02",
+    "jd": "Backend developer needed for payment API integration.",
+    "company_url": "https://invalid-non-existent-domain-404-test.xyz",
+    "days": 1
+  }
+]

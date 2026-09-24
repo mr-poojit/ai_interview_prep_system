@@ -1,0 +1,36 @@
+{
+  "name": "ai-interview-prep-system",
+  "version": "1.0.0",
+  "description": "Personalized AI Interview Preparation Kit Generator & Practice System",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix server run build && npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "evaluate": "tsx scripts/evaluate.ts"
+  },
+  "keywords": [
+    "ai",
+    "interview-prep",
+    "crawler",
+    "evaluation",
+    "nextjs",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.7"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.2"
+  }
+}
