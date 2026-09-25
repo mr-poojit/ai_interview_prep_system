@@ -11,7 +11,22 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: '*',
+    origin: (origin, callback) => {
+      // Allow curl, health monitors, or non-browser agents
+      if (!origin) return callback(null, true);
+      // Allow configured client URL, localhost, or any Vercel preview domain
+      if (
+        config.nodeEnv !== 'production' ||
+        !config.clientUrl ||
+        config.clientUrl === '*' ||
+        origin === config.clientUrl ||
+        origin.endsWith('.vercel.app') ||
+        origin.includes('localhost')
+      ) {
+        return callback(null, true);
+      }
+      return callback(null, true);
+    },
     credentials: true,
   })
 );
