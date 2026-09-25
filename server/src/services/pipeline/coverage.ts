@@ -1,4 +1,4 @@
-import { Question, Requirement, Coverage } from '../../../../shared/types.js';
+import { Question, Requirement, Coverage } from '../../shared/types.js';
 import { generateQuestionsForCategory } from './questionGen.js';
 
 export interface CoverageGapResult {

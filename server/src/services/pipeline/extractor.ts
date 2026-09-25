@@ -1,5 +1,5 @@
 import { llmClient } from '../llm/client.js';
-import { RoleBreakdown, RoleBreakdownSchema, Requirement } from '../../../../shared/types.js';
+import { RoleBreakdown, RoleBreakdownSchema, Requirement } from '../../shared/types.js';
 
 const EXTRACTOR_SYSTEM_PROMPT = `You are a precise technical recruiter and job specification parser.
 Extract the structured role breakdown from the provided job description.

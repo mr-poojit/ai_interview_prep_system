@@ -1,4 +1,4 @@
-import { Question, Requirement, Schedule, ScheduleDay } from '../../../../shared/types.js';
+import { Question, Requirement, Schedule, ScheduleDay } from '../../shared/types.js';
 
 /**
  * Deterministic schedule allocator.

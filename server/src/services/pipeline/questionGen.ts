@@ -1,5 +1,5 @@
 import { llmClient } from '../llm/client.js';
-import { Question, QuestionCategory, Requirement } from '../../../../shared/types.js';
+import { Question, QuestionCategory, Requirement } from '../../shared/types.js';
 
 interface CategoryContext {
   category: QuestionCategory;

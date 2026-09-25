@@ -2,7 +2,7 @@ import {
   KitStructure,
   KitStructureSchema,
   PipelineProgress,
-} from '../../../../shared/types.js';
+} from '../../shared/types.js';
 import { extractRoleBreakdown } from './extractor.js';
 import { crawlCompanySite } from '../crawler.js';
 import { searchPublicInterviewDiscussions } from '../discussionSearch.js';

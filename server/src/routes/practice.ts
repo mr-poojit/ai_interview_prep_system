@@ -2,7 +2,7 @@ import { Router, Response } from 'express';
 import { requireAuth, AuthenticatedRequest } from '../middleware/auth.js';
 import { KitRepository } from '../models/storage.js';
 import { llmClient } from '../services/llm/client.js';
-import { Question } from '../../../shared/types.js';
+import { Question } from '../shared/types.js';
 
 const router = Router();
 

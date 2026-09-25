@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document } from 'mongoose';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { KitStructure } from '../../../shared/types.js';
+import { KitStructure } from '../shared/types.js';
 import { config } from '../config.js';
 import { isUsingInMemoryStore } from '../db.js';
 

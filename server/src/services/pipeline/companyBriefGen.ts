@@ -1,5 +1,5 @@
 import { llmClient } from '../llm/client.js';
-import { CompanyBrief, CompanyBriefSchema } from '../../../../shared/types.js';
+import { CompanyBrief, CompanyBriefSchema } from '../../shared/types.js';
 import { CrawledPage } from '../crawler.js';
 
 const COMPANY_BRIEF_SYSTEM_PROMPT = `You are a corporate intelligence analyst preparing an executive company brief for a job candidate.

@@ -7,7 +7,7 @@ import { generateQuestionsForCategory } from '../services/pipeline/questionGen.j
 import { generateCompanyBrief } from '../services/pipeline/companyBriefGen.js';
 import { crawlCompanySite } from '../services/crawler.js';
 import { allocateSchedule } from '../services/pipeline/scheduler.js';
-import { KitStructureSchema, QuestionCategorySchema, Question, Requirement } from '../../../shared/types.js';
+import { KitStructureSchema, QuestionCategorySchema, Question, Requirement } from '../shared/types.js';
 
 const router = Router();
 

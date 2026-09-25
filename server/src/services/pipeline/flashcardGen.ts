@@ -1,5 +1,5 @@
 import { llmClient } from '../llm/client.js';
-import { Flashcard, Requirement } from '../../../../shared/types.js';
+import { Flashcard, Requirement } from '../../shared/types.js';
 
 export async function generateFlashcards(
   requirements: Requirement[],
