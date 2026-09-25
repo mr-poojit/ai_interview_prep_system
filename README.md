@@ -7,7 +7,16 @@
 [![Next.js](https://img.shields.io/badge/Next.js-16_App_Router-black.svg)](https://nextjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-23.x-green.svg)](https://nodejs.org/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38bdf8.svg)](https://tailwindcss.com/)
+[![Demo Video](https://img.shields.io/badge/Demo_Video-Watch_on_Loom-625df5.svg?logo=loom&logoColor=white)](https://www.loom.com/share/8e1223c598f546e986e034d407dfd819)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+---
+
+## 📺 Demo Walkthrough Video
+
+👉 **[Watch the Complete Product Walkthrough on Loom](https://www.loom.com/share/8e1223c598f546e986e034d407dfd819)**
+
+A full tour demonstrating autonomous multi-stage research, requirement gap-closing, state-preserving question editing, spaced repetition scheduling, and the live AI mock interview rehearsal room.
 
 ---
 

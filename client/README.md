@@ -2,6 +2,8 @@
 
 The frontend web application for [PrepKit AI](../README.md), built with **Next.js 16 (App Router)**, **React 19**, and **Tailwind CSS**.
 
+🎬 **[Watch Demo Video Walkthrough on Loom](https://www.loom.com/share/8e1223c598f546e986e034d407dfd819)**
+
 ## Features
 
 - **Personalized Kit Builder**: Inline question editing, difficulty adjustment, pinning, and category-level regeneration.
